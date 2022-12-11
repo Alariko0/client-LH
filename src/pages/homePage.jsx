@@ -1,5 +1,9 @@
 const Home = () => {
-    return (<h1>HOME</h1>)
+    return (
+        <div className="home">
+            <img src="" alt="home" />
+            <h1>Loading Homes</h1>
+        </div>)
 }
 
 export default Home
