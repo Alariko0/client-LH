@@ -91,7 +91,7 @@ const TodoList = () => {
                 list.map((list) => {
                     return (
                         <p>{list.name}</p>
-                        //<p>{list.tasks}</p>
+
                     )
                 })
             }
