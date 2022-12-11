@@ -1,5 +1,6 @@
-import { useEffect } from "react"
-import TodoListAPI from "../service/todoList.service"
+//import { useEffect } from "react"
+import { Container, Row } from "react-bootstrap"
+//import TodoListAPI from "../service/todoList.service"
 
 
 const list = [
@@ -77,24 +78,35 @@ const list = [
 const TodoList = () => {
 
 
-    const todoListAPI = new TodoListAPI()
-
-    useEffect(() => {
-        todoListAPI.getAllTodo().then(() => { })
-    }, [])
-
+    //    const todoListAPI = new TodoListAPI()
+    //
+    //    useEffect(() => {
+    //        todoListAPI.getAllTodo().then(() => { })
+    //    }, [])
 
 
     return (
         <div>
-            {
-                list.map((list) => {
-                    return (
-                        <p>{list.name}</p>
+            <Container>
+                <Row>
 
-                    )
-                })
-            }
+                    {list.map((list) => {
+                        return (
+
+                            <div>
+                                <p><strong>{list.name}</strong></p><br></br>
+                                <p>{list.tasks.room.electrician.job}</p><br></br>
+                                <p>{list.tasks.room.plumber.job}</p><br></br>
+                                <p>{list.tasks.room.constructionWorker.job.walls.task}</p><br></br>
+                                <p>{list.tasks.room.constructionWorker.job.floor.task}</p><br></br>
+                                <p>{list.tasks.room.constructionWorker.job.ceiling.task}</p><br></br>
+
+                            </div>
+
+                        )
+                    })}
+                </Row>
+            </Container>
         </div>
     )
 }
