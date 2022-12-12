@@ -1,6 +1,8 @@
+import InitAxios from "./initAxios.service"
 import axios from "axios"
 
-class TodoListAPI {
+
+class TodoListAPI extends InitAxios {
     constructor() {
         this.axios = axios.create({
             baseURL: 'http://localhost:5005/todolist'
@@ -9,7 +11,7 @@ class TodoListAPI {
     // Cada una de las rutas que vmos a utilizar
 
     getAllTodo() {
-        return this.axios('/todolist').then((response) => response.data)
+        return this.axios('/').then((response) => response.data)
     }
 
 }
