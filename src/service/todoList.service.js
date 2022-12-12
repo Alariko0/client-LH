@@ -7,7 +7,7 @@ class TodoListAPI extends initAxios {
     // Cada una de las rutas que vamos a utilizar
 
     getAllTodoList() {
-        return this.axios('/gallery').then((response) => response.data, console.log('primera ruta'))
+        return this.axios('/gallery').then((response) => response.data)
     }
 
 
