@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/Navbar/Navbar';
 import Home from './pages/homePage'
-import Login from './pages/logInPage';
+import Login from './pages/logInPage'
 import Signup from './pages/signUpPage';
 import TodoList from './pages/todoListPage';
 

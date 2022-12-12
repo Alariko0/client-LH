@@ -29,6 +29,7 @@ export const AuthProvider = (props) => {
                 .then((user) => {
                     setUser(user)
                     setIsLoggedIn(true)
+                    navigate('/me')
                 })
                 .catch((err) => {
                     console.error(err)
@@ -51,7 +52,7 @@ export const AuthProvider = (props) => {
 
     useEffect(() => {
         authentication()
-    }, [])
+    },)
 
     return (
         <AuthContext.Provider

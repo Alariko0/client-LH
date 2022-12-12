@@ -85,7 +85,7 @@ const TodoList = () => {
             console.log(TodoList)
             setTodoLists(TodoList)
         })
-    }, [])
+    },)
 
 
     return (
