@@ -9,7 +9,7 @@ class TodoListAPI {
     // Cada una de las rutas que vamos a utilizar
 
     getAllTodo() {
-        return this.axios('/todolist').then((response) => response.data)
+        return this.axios('/').then((response) => response.data)
     }
 
     getOneTodoListById(id) {
