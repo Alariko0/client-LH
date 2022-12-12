@@ -2,7 +2,7 @@ import initAxios from "./initAxios.service"
 
 class TodoListAPI extends initAxios {
     constructor() {
-        super('todoList')
+        super('')
     }
     // Cada una de las rutas que vamos a utilizar
 
