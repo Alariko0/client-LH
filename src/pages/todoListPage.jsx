@@ -81,7 +81,7 @@ const TodoList = () => {
     const todoListAPI = new TodoListAPI()
 
     useEffect(() => {
-        todoListAPI.getAllTodo().then((TodoList) => {
+        todoListAPI.getAllTodoList().then((TodoList) => {
             console.log(TodoList)
             setTodoLists(TodoList)
         })
