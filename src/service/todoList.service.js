@@ -2,12 +2,12 @@ import initAxios from "./initAxios.service"
 
 class TodoListAPI extends initAxios {
     constructor() {
-        super('')
+        super('todolist')
     }
     // Cada una de las rutas que vamos a utilizar
 
     getAllTodoList() {
-        return this.axios('/gallery').then((response) => response.data)
+        return this.axios('/').then((response) => response.data)
     }
 
 

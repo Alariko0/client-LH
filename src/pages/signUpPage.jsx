@@ -21,6 +21,17 @@ const Signup = () => {
         <div style={{ margin: '60px' }}>
             <Form onSubmit={createNewUser}>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control
+                        onChange={onChangeNewUser}
+                        type='name'
+                        placeholder='Name'
+                        name='name'
+                        value={newUser.name}
+                        required
+                    />
+                </Form.Group>
+                <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                         onChange={onChangeNewUser}

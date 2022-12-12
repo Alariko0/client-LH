@@ -12,6 +12,7 @@ const Login = () => {
     const onChangeUser = (event) => {
         const { name, value } = event.target
         setUser({ ...user, [name]: value })
+        console.log(user)
     }
 
     const LoginUser = (event) => {

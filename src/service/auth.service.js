@@ -2,10 +2,11 @@ import InitAxios from './initAxios.service'
 
 class AuthAPI extends InitAxios {
     constructor() {
-        super('auth')
+        super('home')
     }
 
     signupUser(body) {
+        console.log(body)
         return this.axios.post('/signup', body).then((response) => response.data)
     }
 
