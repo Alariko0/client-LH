@@ -5,6 +5,7 @@ import Navbar from './components/NavBar/Navbar';
 import Home from './pages/homePage'
 import Login from './pages/logInPage'
 import Signup from './pages/signUpPage';
+import TodoListCreate from './pages/todoListCreatePage';
 import TodoList from './pages/todoListPage';
 import User from './pages/userPage';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/me' element={<User />} />
+        <Route path='/create' element={<TodoListCreate />} />
       </Routes>
     </div>
   );
