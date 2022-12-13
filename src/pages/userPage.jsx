@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap"
 import TodoListAPI from "../service/todoList.service"
 
 
-const TodoList = () => {
+const User = () => {
 
 
 
@@ -29,8 +29,7 @@ const TodoList = () => {
 
                             <div key={todoLists._id}>
                                 <p><strong>{todoLists.name}</strong></p><br></br>
-                                <p>{todoLists.tasks.room.electrician.job}</p><br></br>
-                                <p>{todoLists.tasks.room.plumber.job}</p><br></br>
+
                                 <p>{todoLists.tasks.room.constructionWorker.job.walls.task}</p><br></br>
                                 <p>{todoLists.tasks.room.constructionWorker.job.floor.task}</p><br></br>
                                 <p>{todoLists.tasks.room.constructionWorker.job.ceiling.task}</p><br></br>
@@ -44,4 +43,4 @@ const TodoList = () => {
     )
 }
 
-export default TodoList
+export default User
