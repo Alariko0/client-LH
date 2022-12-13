@@ -9,9 +9,9 @@ const User = () => {
 
     const [todoLists, setTodoLists] = useState([])
 
-    const todoListAPI = new TodoListAPI()
 
     useEffect(() => {
+        const todoListAPI = new TodoListAPI()
         todoListAPI.getAllTodoList().then((todoList) => {
             console.log(todoList)
             setTodoLists(todoList)

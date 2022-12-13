@@ -52,7 +52,7 @@ export const AuthProvider = (props) => {
 
     useEffect(() => {
         authentication()
-    },)
+    }, [])
 
     return (
         <AuthContext.Provider
