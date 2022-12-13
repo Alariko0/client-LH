@@ -1,36 +1,73 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import { useContext } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import img from '../../assets/logoNavbar.png'
-import './Navbar.css'
+
+import './Navbar.css';
+
+import { AuthContext } from '../../context/auth.context';
 
 function NavBar() {
+    const { logOut, isLoggedIn } = useContext(AuthContext);
+
     return (
-        <Navbar className='link-navbar' bg="none" expand="lg">
+        <>
             <Container>
-                <Navbar.Brand href="/"><img className='logo' src={img} alt="logo" />Loading Homes</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#">New Project</Nav.Link>
-                        <Nav.Link href="/Login">Log In</Nav.Link>
-                        <Nav.Link href="/Signup">Sign Up</Nav.Link>
-                        <NavDropdown title="More" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                </Navbar.Collapse>
+                <Navbar className='link-navbar' bg="none" expand="lg">
+                    <Navbar.Brand href="/"><img className='logo' src={img} alt="logo" />Loading Homes</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className='me-auto'>
+                            <Nav.Link as='span'>
+                                <Link className='link-navbar' to='/'>
+                                    Home
+                                </Link>
+                            </Nav.Link>
+                            <Nav.Link as='span'>
+                                <Link className='link-navbar' to='/lists'>
+                                    Lists
+                                </Link>
+                            </Nav.Link>
+                            <Nav.Link as='span'>
+                                <Link className='link-navbar' to='/create'>
+                                    Create
+                                </Link>
+                            </Nav.Link>
+                            {isLoggedIn ? (
+                                <>
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/me'>
+                                            User
+                                        </Link>
+                                    </Nav.Link>
+                                    <Nav.Link as='span'>
+                                        <p className='link-navbar' onClick={logOut}>
+                                            Log out
+                                        </p>
+                                    </Nav.Link>
+                                </>
+                            ) : (
+                                <>
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/signup'>
+                                            Signup
+                                        </Link>
+                                    </Nav.Link>
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/login'>
+                                            Login
+                                        </Link>
+                                    </Nav.Link>
+                                </>
+                            )}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+
             </Container>
-        </Navbar>
+        </>
     )
 }
 

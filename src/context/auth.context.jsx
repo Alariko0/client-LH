@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
 import userApi from '../service/user.service'
-import { useNavigate } from 'react-router-dom'
+
 
 export const AuthContext = createContext()
 
@@ -10,7 +10,6 @@ export const AuthProvider = (props) => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const navigate = useNavigate()
 
     const storeSetToken = (token) => {
         localStorage.setItem(LOCAL_STORAGE_AUTH, token)
