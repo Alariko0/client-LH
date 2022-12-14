@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import Form from 'react-bootstrap/Form';
 
-function Checkbox() {
-    const [checked, setChecked] = useState(false);
-    <ButtonGroup className="mb-2">
-        <ToggleButton
-            id="toggle-check"
-            type="checkbox"
-            variant="secondary"
-            checked={checked}
-            value="1"
-            onChange={(e) => setChecked(e.currentTarget.checked)}
-        >
-        </ToggleButton>
-    </ButtonGroup>
+function CheckBox() {
+    return (
+        <>
+            <Form.Check aria-label="option 1" />
+        </>
+    );
 }
 
-export default Checkbox
+export default CheckBox;
