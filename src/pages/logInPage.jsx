@@ -2,8 +2,10 @@ import { useContext, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import authApi from '../service/auth.service'
 import { AuthContext } from '../context/auth.context'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const navigate = useNavigate()
     const [user, setUser] = useState({})
     const { storeSetToken, authentication, setIsLoading } = useContext(AuthContext)
 
@@ -19,6 +21,7 @@ const Login = () => {
             storeSetToken(res.token)
             setIsLoading(true)
             authentication()
+            navigate('/me')
 
         })
     }
