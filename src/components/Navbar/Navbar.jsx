@@ -25,18 +25,24 @@ function NavBar() {
                                     Home
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link as='span'>
-                                <Link className='link-navbar' to='/lists'>
-                                    Lists
-                                </Link>
-                            </Nav.Link>
-                            <Nav.Link as='span'>
-                                <Link className='link-navbar' to='/create'>
-                                    Create
-                                </Link>
-                            </Nav.Link>
                             {isLoggedIn ? (
                                 <>
+
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/lists'>
+                                            Lists
+                                        </Link>
+                                    </Nav.Link>
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/update'>
+                                            Update
+                                        </Link>
+                                    </Nav.Link>
+                                    <Nav.Link as='span'>
+                                        <Link className='link-navbar' to='/create'>
+                                            Create
+                                        </Link>
+                                    </Nav.Link>
                                     <Nav.Link as='span'>
                                         <Link className='link-navbar' to='/me'>
                                             User
