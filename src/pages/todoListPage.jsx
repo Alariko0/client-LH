@@ -29,7 +29,7 @@ const TodoList = () => {
                                 <p>{todoLists.tasks.room.plumber?.job}</p><br></br>
                                 <p>{todoLists.tasks.room.constructionWorker.job?.walls.task}</p><br></br>
                                 <p>{todoLists.tasks.room.constructionWorker.job?.floor.task}</p><br></br>
-                                <p>{todoLists.tasks.room.constructionWorker.job?.ceiling.task}</p><br></br>
+                                <p>{todoLists.tasks.room.constructionWorker.job?.ceiling?.task}</p><br></br>
                             </div>
 
                         )

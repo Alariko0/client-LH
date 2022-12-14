@@ -50,22 +50,15 @@ const TodoListCreate = () => {
                         placeholder='----'
                     />
                 </Form.Group>
-                <Form.Select aria-label="Default select example">
-                    <option>Rooms</option>
-                    <option value="1">Electrician</option>
-                    <option value="2">Plumber</option>
-                    <option value="3">Construction Worker</option>
-                </Form.Select>
-                {/* {<Form.Group className='mb-3' controlId='exampleForm.ControlInput2'>
-                    <Form.Label>ROOM</Form.Label>
+                <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+                    <Form.Label>Room</Form.Label>
                     <Form.Control
-                        select
-                        type='text'
-                        placeholder='--------'
-                        name='--------'
                         onChange={updateNewTodoList}
+                        type='text'
+                        name='room'
+                        placeholder='----'
                     />
-                </Form.Group>} */}
+                </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
                     <Form.Label>PLUMBER</Form.Label>
                     <Form.Control
