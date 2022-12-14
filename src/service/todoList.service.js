@@ -11,7 +11,7 @@ class TodoListAPI extends initAxios {
         return this.axios.get(`/${id}`).then((response) => response.data);
     }
     createTodoList(body) {
-        return this.axios.post(`/`, body).then((response) => response.data);
+        return this.axios.post(`/create`, body).then((response) => response.data);
     }
     updateOneTodoListById(id, body) {
         return this.axios
