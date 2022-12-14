@@ -4,15 +4,10 @@ import TodoListAPI from "../service/todoList.service"
 
 
 const TodoList = () => {
-
-
-
     const [todoLists, setTodoLists] = useState([])
 
-    const todoListAPI = new TodoListAPI()
-
     useEffect(() => {
-        todoListAPI.getAllTodoList().then((todoList) => {
+        TodoListAPI.getAllTodoList().then((todoList) => {
             console.log(todoList)
             setTodoLists(todoList)
         })
