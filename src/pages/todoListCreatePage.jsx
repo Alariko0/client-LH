@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import TodoListAPI from '../service/todoList.service';
+import TodoListApi from '../service/todoList.service'
 import { useNavigate } from 'react-router-dom'
 
 const TodoListCreate = () => {
@@ -34,21 +34,22 @@ const TodoListCreate = () => {
                         placeholder='----'
                     />
                 </Form.Group>
-                {/*<Form.Group className='mb-3' controlId='exampleForm.ControlInput2'>
-                    <Form.Label>ROOM</Form.Label>
-                    <Form.Control
-                        type='text'
-                        placeholder='--------'
-                        name='--------'
-                        onChange={updateNewTodoList}
-    </Form.Group>*/}
                 <Form.Select aria-label="Default select example">
                     <option>Rooms</option>
                     <option value="1">Electrician</option>
                     <option value="2">Plumber</option>
                     <option value="3">Construction Worker</option>
                 </Form.Select>
-
+                {/* {<Form.Group className='mb-3' controlId='exampleForm.ControlInput2'>
+                    <Form.Label>ROOM</Form.Label>
+                    <Form.Control
+                        select
+                        type='text'
+                        placeholder='--------'
+                        name='--------'
+                        onChange={updateNewTodoList}
+                    />
+                </Form.Group>} */}
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
                     <Form.Label>TASKS</Form.Label>
                     <Form.Control
