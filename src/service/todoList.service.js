@@ -33,4 +33,4 @@ class TodoListAPI extends initAxios {
 
 }
 
-export default TodoListAPI
+export default new TodoListAPI()

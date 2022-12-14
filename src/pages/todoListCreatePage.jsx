@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import TodoListApi from '../service/todoList.service'
+import todoListApi from '../service/todoList.service'
 import { useNavigate } from 'react-router-dom'
 
 const TodoListCreate = () => {
@@ -9,7 +9,7 @@ const TodoListCreate = () => {
 
     const createNewTodoList = (event) => {
         event.preventDefault();
-        TodoListApi
+        todoListApi
             .createTodoList(todoList)
             .then(() => {
                 navigate('/lists')
