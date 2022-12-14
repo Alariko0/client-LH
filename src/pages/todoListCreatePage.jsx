@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import todoListApi from '../service/todoList.service'
 import { useNavigate } from 'react-router-dom'
-
 const TodoListCreate = () => {
     const navigate = useNavigate()
     const [todoList, setTodoList] = useState({})
-
     const createNewTodoList = (event) => {
         event.preventDefault();
         todoListApi
@@ -15,12 +13,10 @@ const TodoListCreate = () => {
                 navigate('/lists')
             })
     }
-
     const updateNewTodoList = (event) => {
         const { name, value } = event.target
         setTodoList({ ...todoList, [name]: value })
     }
-
     return (
         <>
             <div style={{ marginTop: '60px' }}></div>
@@ -75,5 +71,4 @@ const TodoListCreate = () => {
         </>
     );
 };
-
 export default TodoListCreate
