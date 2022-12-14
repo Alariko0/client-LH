@@ -9,7 +9,7 @@ const TodoListCreate = () => {
 
     const createNewTodoList = (event) => {
         event.preventDefault();
-        TodoListAPI
+        TodoListApi
             .createTodoList(todoList)
             .then(() => {
                 navigate('/lists')
@@ -68,7 +68,7 @@ const TodoListCreate = () => {
                         onChange={updateNewTodoList}
                     />
                 </Form.Group>
-                <Button onClick={createNewTodoList} variant='primary' type='submit'>
+                <Button variant='primary' type='submit'>
                     Create
                 </Button>
             </Form>
