@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-import { Button, Container, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import TodoListAPI from "../service/todoList.service"
-import Checkbox from "../components/checkbox/checkbox"
 import TodoListCard from "../components/todoListCard/todoListCard"
 
 
@@ -18,10 +17,11 @@ const TodoList = () => {
     }, [])
 
     const updatePage = () => {
-        TodoListAPI.getAllTodoList().then((todoList) => {
+        TodoListAPI.getAllTodoList()
+            .then((todoList) => {
 
-            setTodoLists(todoList)
-        })
+                setTodoLists(todoList)
+            })
     }
 
     return (
