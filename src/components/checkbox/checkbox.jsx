@@ -5,6 +5,7 @@ const Checkbox = ({ initialState }) => {
 
     const onClick = (checked) => {
         setChecked(checked);
+
         // onChange(id, checked);
     }
     return (
