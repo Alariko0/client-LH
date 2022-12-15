@@ -15,8 +15,13 @@ const TodoListCard = ({ todoListProp, updatePage }) => {
                 updatePage()
             })
             .catch(err => console.log(err))
+
     }
+
     console.log('TodoList-----------------', todoList)
+
+
+
     return (
         <div>
             <p><strong>{todoList.name}</strong></p><br></br><br></br>
