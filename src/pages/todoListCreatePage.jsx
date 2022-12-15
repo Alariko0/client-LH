@@ -42,7 +42,7 @@ const TodoListCreate = () => {
             <div style={{ marginTop: '60px' }}></div>
             <Form onSubmit={createNewTodoList}>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
-                    <Form.Label>NAME</Form.Label>
+                    <Form.Label>DIRECCION</Form.Label>
                     <Form.Control
                         onChange={updateNewTodoList}
                         type='text'
@@ -51,7 +51,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
-                    <Form.Label>Room</Form.Label>
+                    <Form.Label>ROOM</Form.Label>
                     <Form.Control
                         onChange={updateNewTodoList}
                         type='text'
@@ -60,7 +60,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
-                    <Form.Label>PLUMBER</Form.Label>
+                    <Form.Label>FONTANERO</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='-------'
@@ -69,7 +69,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
-                    <Form.Label>ELECTRICIAN</Form.Label>
+                    <Form.Label>ELECTRICISTA</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='-------'
@@ -78,7 +78,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
-                    <Form.Label>WALLS</Form.Label>
+                    <Form.Label>PAREDES</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='-------'
@@ -87,7 +87,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
-                    <Form.Label>FLOOR</Form.Label>
+                    <Form.Label>SUELO</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='-------'
@@ -96,7 +96,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group>
                 <Form.Group className='mb-3' controlId='exampleForm.ControlInput3'>
-                    <Form.Label>CEILING</Form.Label>
+                    <Form.Label>TECHO</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='-------'
@@ -114,7 +114,7 @@ const TodoListCreate = () => {
                     />
                 </Form.Group> */}
                 <Button variant='primary' type='submit'>
-                    Create
+                    CREAR
                 </Button>
             </Form>
         </>

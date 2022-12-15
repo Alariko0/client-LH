@@ -11,7 +11,6 @@ const Checkbox = ({ initialState, setTodoList, worker, subwork }) => {
                 _todoList.tasks.room[worker].job[subwork].completed = checkboxChecked
                 return _todoList
             })
-
         } else {
             setTodoList(todoList => {
                 const _todoList = { ...todoList }
@@ -19,7 +18,6 @@ const Checkbox = ({ initialState, setTodoList, worker, subwork }) => {
                 return _todoList
             })
         }
-
         // onChange(id, checked);
     }
     return (
@@ -30,5 +28,4 @@ const Checkbox = ({ initialState, setTodoList, worker, subwork }) => {
         />
     )
 }
-
 export default Checkbox

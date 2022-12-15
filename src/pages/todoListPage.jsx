@@ -2,28 +2,19 @@ import { useEffect, useState } from "react"
 import { Container, Row } from "react-bootstrap"
 import TodoListAPI from "../service/todoList.service"
 import TodoListCard from "../components/todoListCard/todoListCard"
-
-
-
 const TodoList = () => {
     const [todoLists, setTodoLists] = useState([])
-
     useEffect(() => {
-
         TodoListAPI.getAllTodoList().then((todoList) => {
-
             setTodoLists(todoList)
         })
     }, [])
-
     const updatePage = () => {
         TodoListAPI.getAllTodoList()
             .then((todoList) => {
-
                 setTodoLists(todoList)
             })
     }
-
     return (
         <div>
             <Container>
@@ -36,5 +27,12 @@ const TodoList = () => {
         </div>
     )
 }
-
 export default TodoList
+
+
+
+
+
+
+
+
